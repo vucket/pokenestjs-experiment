@@ -1,17 +1,13 @@
 import { Controller, Get, Param } from '@nestjs/common';
 import { PokemonService } from './pokemon.service';
+import { IPokemon } from './interfaces/pokemon.interface';
 
 @Controller('pokemon')
 export class PokemonController {
   constructor(private readonly pokemonService: PokemonService) {}
 
-  @Get()
-  findAll() {
-    return this.pokemonService.findAll();
-  }
-
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.pokemonService.findOne(+id);
+  async findOne(@Param('id') id: string): Promise<IPokemon> {
+    return await this.pokemonService.findOne(id);
   }
 }
