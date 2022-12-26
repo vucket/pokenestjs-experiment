@@ -15,7 +15,7 @@ $ npm install
 
 ## Running the app
 
-The project will run on `localhost:5000`
+The project will run on [http://localhost:5000](http://localhost:5000)
 The main api to query for a pokemon is under `/pokemon/[id]`
 
 ```bash
@@ -26,6 +26,6 @@ $ npm run start
 $ npm run start:dev
 
 # production mode
-$ npm run builld
+$ npm run build
 $ npm run start:prod
 ```
